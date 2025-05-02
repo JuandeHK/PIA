@@ -1,5 +1,6 @@
-module Main (main) where
+cuadrado :: Int -> Int
+cuadrado x = x * x
 
-main :: IO ()
-main = do
-  putStrLn "hello world"
+sumaLista :: [Int] -> Int
+sumaLista [] = 0
+sumaLista (x:xs) = x + sumaLista xs
