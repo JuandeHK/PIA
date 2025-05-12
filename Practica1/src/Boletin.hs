@@ -20,7 +20,7 @@ maximoCurry2 x y = if x > y then x else y
 --su radio (usar 22/7 o la constante predefinida pi como aproximacion del numero π).
 
 areaCirculo :: Integer -> Float
-areaCirculo r = 22/7 * fromInteger(r)^2 --FromInteger transforma en el tipo necesario que sea, en este caso en un float.
+areaCirculo r = 22/7 * fromInteger (r*r) --FromInteger transforma en el tipo necesario que sea, en este caso en un float.
 
 --3. Sucesion de Fibonacci por encaje de patrones.
 
@@ -29,7 +29,7 @@ fibonacci1 1 = 0
 fibonacci1 2 = 1
 fibonacci1 n = fibonacci1(n-1) + fibonacci1 (n-2)
 
---3. Sucesion de Fibonacci con guardas.Applicative
+--3. Sucesion de Fibonacci con guardas.
 
 fibonacci2 :: Integer -> Integer
 fibonacci2 n 
@@ -58,7 +58,8 @@ cuadrado :: Integer -> Integer
 cuadrado x = x*x
 
 aumentarC::Integer -> Integer
-aumentarC = cuadrado . sucesor -- Cojo el cuadrado del numero q entra y calculo su sucesor
+--aumentarC = cuadrado . sucesor -- Cojo el cuadrado del numero q entra y calculo su sucesor
+aumentarC x = cuadrado (sucesor x)
 
 aumentar2C::Integer -> Integer
 aumentar2C = sucesor . cuadrado --Cojo el sucesor y le aplico el cuadrado.

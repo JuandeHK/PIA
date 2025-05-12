@@ -7,8 +7,6 @@ type Denominador = Integer
 
 type Racional = (Numerador, Denominador) --Creo el tipo de datos RACIONAL como renombramiento de un par de enteros.
 
-
-
 simplificaRac :: Racional -> Racional
 simplificaRac (a,b) = (a `div` mcdAB, b `div` mcdAB)
     where mcdAB = gcd a b

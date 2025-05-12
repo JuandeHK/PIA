@@ -14,6 +14,7 @@ quitarCorchetesComas :: [Int] -> String
 quitarCorchetesComas [] =  []
 quitarCorchetesComas [x] = show x
 quitarCorchetesComas (x:xs) = show x ++ "" ++ quitarCorchetesComas xs
+
 main = do
     contenido <- readFile "D:\\2024-2025-2º\\GitHub\\PIA\\Practica8\\src\\datos.txt"
     let contenidoOrdInt = ordenarDatos contenido

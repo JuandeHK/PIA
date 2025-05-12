@@ -3,7 +3,7 @@ module Parte2 where
 
 -- cAplica f xs = concat (map f xs)
 cAplica :: (a->[b]) -> [a] -> [b]
-cAplica f xs = concat (map f xs)
+cAplica f xs =  concat(map f xs)
 
 -- Rota una lista una sola vez: mueve el primer elemento al final
 rotaUno :: [a] -> [a]

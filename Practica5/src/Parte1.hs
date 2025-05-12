@@ -13,14 +13,6 @@ borrar num (x:xs)
     | num == x = xs
     | otherwise =  x: borrar num xs 
 
---Sin recursividad
-insertar :: (Ord a) => a -> [a] -> [a]
-insertar num [] = [num]
-insertar num (x:y:xs)
-    | num >= x && num <= y = x:num:y:xs
-    | otherwise = x:y:xs ++ [num]
-
---Con recursividad
 insertar2 :: (Ord a) => a -> [a] -> [a]
 insertar2 num [] = [num]
 
@@ -50,7 +42,7 @@ mezcla :: Ord a => [a] -> [a] -> [a]
 mezcla [] [] = []
 mezcla [] ys = ys
 mezcla xs [] = xs
-mezcla (x:xs) ys = mezcla (ordInsercion xs) (insertar2 x (ordInsercion ys))
+mezcla (x:xs) ys = mezcla xs (insertar2 x (ordInsercion ys))
 
 mitades :: [a] -> ([a],[a])
 mitades ls = (take tam1 ls, drop tam1 ls)

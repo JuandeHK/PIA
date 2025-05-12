@@ -38,7 +38,6 @@ data Tuit = Datos {
 
 type Tuits = [Tuit]
 
-
 instance Show Tuit where --iden, como es un string no hace falta hacerle un show
     show (Datos(d,m,a) identidad mensaje) 
         | esCorta mensaje = identidad ++ " (" ++ show d ++  "," ++ show m ++  "," ++ show a ++ "): " ++ mensaje 
